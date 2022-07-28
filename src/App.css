@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("../src/images/3.jpg"); */
+  background-color: rgb(242, 242, 242);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+}

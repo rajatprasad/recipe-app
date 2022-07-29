@@ -11,6 +11,11 @@ function Search() {
 
   const inputReference = useRef(null);
 
+  const borderStyle =
+    input && food?.length > 0
+      ? { borderRadius: "1.5rem 1.5rem 0rem 0rem" }
+      : {};
+
   useEffect(() => {
     inputReference.current.focus();
   }, [input]);
@@ -51,6 +56,7 @@ function Search() {
       <div>
         <FaSearch />
         <input
+          style={borderStyle}
           ref={inputReference}
           onChange={handleInput}
           type="text"
@@ -58,7 +64,7 @@ function Search() {
         />
       </div>
 
-      {food?.length > 0 && (
+      {food?.length > 0 && input && (
         <Results>
           {food.map((item, index) => (
             <p key={index} onClick={setSuggetion}>
@@ -73,8 +79,12 @@ function Search() {
 
 const Results = styled.div`
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   overflow-y: scroll;
+  border-radius: 0rem 0rem 1.5rem 1.5rem;
+  /* ::-webkit-scrollbar {
+    display: none;
+  } */
 
   p {
     /* border: none; */
@@ -84,7 +94,6 @@ const Results = styled.div`
     padding: 0.5rem 3rem;
     height: 3rem;
     border: none;
-    /* border-radius: 1rem; */
     overflow-y: scroll;
     outline: none;
     width: 100%;
@@ -111,7 +120,7 @@ const FormStyle = styled.form`
     color: white;
     padding: 0.5rem 3rem;
     border: none;
-    /* border-radius: 1rem; */
+    border-radius: 1.5rem;
     outline: none;
     width: 100%;
   }

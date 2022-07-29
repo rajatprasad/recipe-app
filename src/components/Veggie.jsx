@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -84,9 +82,6 @@ const Card = styled.div`
 `;
 
 const Background = styled.div`
-  /* background-color: rgba(255, 255, 255, 0.555);
-  backdrop-filter: blur(10px); */
-
   background-color: white;
   border: 2px solid white;
   border-radius: 20px;
@@ -142,12 +137,12 @@ const Background = styled.div`
   }
 `;
 
-const Gradient = styled.div`
-  z-index: 3;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-`;
+// const Gradient = styled.div`
+//   z-index: 3;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+// `;
 
 export default Veggie;

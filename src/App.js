@@ -37,7 +37,7 @@ const HeroText = styled.div`
 
   h1 {
     font-family: "Abril Fatface", cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 400;
     margin-bottom: 5rem;
     color: #222;

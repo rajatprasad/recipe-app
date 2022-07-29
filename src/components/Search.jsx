@@ -36,7 +36,7 @@ function Search() {
         clearTimeout(timerId);
       }
       setTimerId(setTimeout(() => searchQuery(e.target.value), 500));
-      searchQuery(e.target.value);
+      // searchQuery(e.target.value);
     }
   };
 
